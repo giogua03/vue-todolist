@@ -7,13 +7,13 @@
     <title>Document</title>
     <script src="script.js"defer></script>
     <link rel="stylesheet" href="scrypt.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
+   
 </head>
 <body>
     <div class="container" id="applicazione">
         <h1>TO DO LIST</h1>
         <div class="nuovo">
-            <input @keyup.enter="piuTodo" type="text" v-model="nuovo"/>
+            <input @keyup.enter="piuTodo" type="text" v-model="nuovoTo"/>
             <button @click="piuTodo">AGGIUNGI ALLA LISTA</button>
         </div>
         <div class="todos">
@@ -26,5 +26,7 @@
             </ul>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" ></script>
 </body>
+
 </html>
