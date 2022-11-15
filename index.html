@@ -5,9 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js"defer></script>
+    <link rel="stylesheet" href="scrypt.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
 </head>
 <body>
-    
+    <div class="container" id="applicazione">
+        <h1>TO DO LIST</h1>
+        <div class="nuovo">
+            <input @keyup.enter="piuTodo" type="text" v-model="nuovo"/>
+            <button @click="piuTodo">AGGIUNGI ALLA LISTA</button>
+        </div>
+        <div class="todos">
+            <h2 v-if="todo.length == 0">TUTTI I COMPITI SVOLTI</h2>
+            <ul v-else>
+                <li v-for="(tod, i) in todo" :key="tod" class="tod">
+                    {{tod}}
+                    <i class="calcella" @click="cancellaTodo(i)"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
