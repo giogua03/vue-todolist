@@ -7,6 +7,8 @@
     <title>Document</title>
     <script src="script.js"defer></script>
     <link rel="stylesheet" href="scrypt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
    
 </head>
 <body>
@@ -21,7 +23,7 @@
             <ul v-else>
                 <li v-for="(tod, i) in todo" :key="tod" class="tod">
                     {{tod}}
-                    <i class="calcella" @click="cancellaTodo(i)"></i>
+                    <i class="fas fa-times" @click="cancellaTodo(i)"></i>
                 </li>
             </ul>
         </div>
