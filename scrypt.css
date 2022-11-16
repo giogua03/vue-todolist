@@ -5,10 +5,6 @@ h1{
     
     padding:0 4rem;
 }
-.container{
-    margin: 5rem;
-    
-}
 .nuovo{
     text-align: center;
 
@@ -16,4 +12,10 @@ h1{
 
 h2{
     text-align: center;
+}
+.todos{
+    background-color: blueviolet;
+    color :orange;
+    margin: 2rem;
+    padding: 1rem
 }

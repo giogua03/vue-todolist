@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"defer></script>
+    
     <link rel="stylesheet" href="scrypt.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer ></script>
+    <script src="script.js"defer></script>
    
 </head>
 <body>
-    <div class="container" id="applicazione">
+    <div  id="applicazione">
         <h1>TO DO LIST</h1>
         <div class="nuovo">
             <input @keyup.enter="piuTodo" type="text" v-model="nuovoTo"/>
@@ -22,13 +23,13 @@
             <h2 v-if="todo.length == 0">TUTTI I COMPITI SVOLTI</h2>
             <ul v-else>
                 <li v-for="(tod, i) in todo" :key="tod" class="tod">
-                    {{tod}}
+                    {{tod.text}}
                     <i class="fas fa-times" @click="cancellaTodo(i)"></i>
                 </li>
             </ul>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" ></script>
+    
 </body>
 
 </html>
